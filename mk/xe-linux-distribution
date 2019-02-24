@@ -123,6 +123,7 @@ identify_redhat()
     # CentOS release 4.0 (Final)
     # CentOS release 5 (Final)
     # CentOS Linux release 7.0.1406 (Core)
+    # Sangoma Linux release 7.5.1805 (Core)
 
     # distro=scientific
     # Scientific Linux release 6.5 (Carbon)
@@ -148,6 +149,7 @@ identify_redhat()
                -e 's/^CentOS release \([0-9]*\)\.\([0-9]*\) (.*)/distro=centos;major=\1;minor=\2/gp;' \
                -e 's/^CentOS release \([0-9]*\) (.*)/distro=centos;major=\1/gp;' \
                -e 's/^CentOS Linux release \([0-9]*\)\.\([0-9]*\)\(\.[0-9]*\)\? (.*)/distro=centos;major=\1;minor=\2/gp;' \
+               -e 's/^Sangoma Linux release \([0-9]*\)\.\([0-9]*\)\(\.[0-9]*\)\? (.*)/distro=centos;major=\1;minor=\2/gp;' \
                -e 's/^Enterprise Linux Enterprise Linux .* release \([0-9]*\)\.\([0-9]*\) (.*)$/distro=oracle;major=\1;minor=\2;/gp;' \
                -e 's/^Enterprise Linux Enterprise Linux .* release \([0-9]*\) (.*)$/distro=oracle;major=\1/gp;' \
                -e 's/^Oracle Linux Server release \([0-9]*\)\.\([0-9]*\)$/distro=oracle;major=\1;minor=\2/gp;' \
